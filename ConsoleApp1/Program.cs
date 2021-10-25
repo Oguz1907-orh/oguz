@@ -8,21 +8,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            TEST();
+            //TEST();
             //StudentTest();
             //StudentSpTest();
         }
 
-        private static void TEST()
-        {
-            StudentManager studentManager = new StudentManager(new EfStudentDal());
+        //private static void TEST()
+        //{
+        //    StudentManager studentManager = new StudentManager(new EfStudentDal());
 
-            foreach (var student in studentManager.GetAll())
-            {
-                Console.WriteLine(student.studentName + " " + student.StudentSurname);
-            }
+        //    foreach (var student in studentManager.GetAll())
+        //    {
+        //        Console.WriteLine(student.studentName + " " + student.StudentSurname);
+        //    }
 
-        }
+        //}
         //private static void StudentTest()
         //{
         //    StudentManager studentManager = new StudentManager(new EfStudentDal());
