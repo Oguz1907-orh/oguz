@@ -1,0 +1,23 @@
+@page
+@using DevExtremeUI.Models
+
+<h2 class="content-block">Oguz</h2>
+
+@(Html.DevExtreme().DataGrid<Student>()
+    .ElementAttr(new { @class = "dx-card wide-card" })
+    .DataSource(d => d.WebApi().Controller("Students").LoadAction("getall").Key("Id"))
+    .ShowBorders(false)
+    .FilterRow(f => f.Visible(true))
+    .FocusedRowEnabled(true)
+    .FocusedRowIndex(0)
+    .ColumnAutoWidth(true)
+    .ColumnHidingEnabled(true)
+    .AccessKey("Data")
+    .Columns( columns => {
+        columns.AddFor(m => m.StudentId);
+        columns.AddFor(m => m.StudentName);
+        columns.AddFor(m => m.StudentSurname);
+
+    })
+
+)
